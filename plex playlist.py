@@ -24,7 +24,7 @@ plex = account.resource(SERVERNAME).connect()
 
 Series_list = []
 for series_name in SERIES_NAMES:
-    Series_list.append(plex.library.section("TV Shows").get(series_name).episodes())
+    Series_list.append(plex.library.section("TV Shows").get(series_name).episodes()) # or use .unwatched() to only select unwatched episodes
 
 num_series = len(Series_list)
 
